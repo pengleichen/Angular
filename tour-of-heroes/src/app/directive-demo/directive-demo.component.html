@@ -1,0 +1,48 @@
+<h1>Directive</h1>
+<h2>Attribute Directive: appHighlight</h2>
+<h3>Pick a highlight color</h3>
+<div>
+  <label>
+    <input type="radio" name="colors" (click)="color = 'green'">
+    Green
+  </label>
+  <label>
+    <input type="radio" name="colors" (click)="color = 'yellow'">
+    Yellow
+  </label>
+  <label>
+    <input type="radio" name="colors" (click)="color = 'cyan'">
+    Cyan
+  </label>
+</div>
+<p [appHighlight]="color">Highlight me!</p>
+<p [appHighlight]="color" defaultColor="violet">Highlight me too!</p>
+
+<h2>Construct Directive: appUnless</h2>
+<p>
+  The condition is currently <span [ngClass]="{'false': !condition, 'true': condition}">{{condition}}</span>.
+  <button (click)="condition = !condition" [class.false]="condition" [class.true]="!condition">Toggle condition to {{!condition}}</button>
+</p>
+<p *appUnless="condition" class="unless false">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition" class="unless true">
+  (B) Although the condition is true,
+  this paragraph is displayed because appUnless is set to false.
+</p>
+
+
+<h4>UnlessDirective with template</h4>
+
+<p *appUnless="condition">Show this sentence unless the condition is true.</p>
+
+<p *appUnless="condition" class="code unless">
+  (A) &lt;p *appUnless="condition" class="code unless"&gt;
+</p>
+
+<ng-template [appUnless]="condition">
+  <p class="code unless">
+    (A) &lt;ng-template [appUnless]="condition"&gt;
+  </p>
+</ng-template>

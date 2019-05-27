@@ -1,0 +1,17 @@
+@successful-color: #42A948;
+
+@danger-color: #a94442;
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ng-valid {
+  &[required], &required {
+    border-left: 5px solid @successful-color;
+  }
+}
+.cross-validation-error input,
+.ng-invalid:not(form) {
+  border-left: 5px solid @danger-color;
+}

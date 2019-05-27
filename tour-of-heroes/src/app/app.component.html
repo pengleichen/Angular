@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/demo/directive">Directive Demo</a>
+  <a routerLink="/demo/pipe">Pipe Demo</a>
+  <a routerLink="/demo/sizer">Sizer Demo</a>
+  <a routerLink="/demo/model-binding">Model Binding Demo</a>
+  <a routerLink="/demo/component-interaction">Component Interaction Demo</a>
+  <a routerLink="/demo/dynamic-component">Dynamic Component Demo</a>
+  <a routerLink="/demo/form">Form Demo</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+
+<app-sizer [size]="fontSizePx"
+           (sizeChange)="fontSizePx=$event"></app-sizer>
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>

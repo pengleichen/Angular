@@ -1,0 +1,20 @@
+<p>Today is {{today | date}}</p>
+
+<p>The date is {{today | date: 'fullDate'}}</p>
+
+<p>The time is {{today | date: 'shortTime'}}</p>
+
+<p>The time is {{today | date: 'MM/dd/yyyy'}}</p>
+
+<p>The hero's birthday is {{birthday | date: format}}</p>
+<button (click)="toggleFormat()">Toggle Format</button>
+
+<p>The chained hero's birthday is {{birthday | date | uppercase}}</p>
+
+<p>Super power boost: {{2 | exponentialStrength: 10}}</p>
+<p>Super power boost: {{2 | exponentialStrength}}</p>
+
+<h2>Power Boost Calculator</h2>
+<div>Normal Number: <input [(ngModel)]="power" ></div>
+<div>Boost Number: <input [(ngModel)]="factor" ></div>
+<p>Super Hero Power: {{power | exponentialStrength: factor}}</p>

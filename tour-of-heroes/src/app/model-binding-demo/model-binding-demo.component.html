@@ -1,0 +1,7 @@
+<h1>NgModel Binding</h1>
+<h2>Result: {{firstName}}</h2>
+<br><label><input [value]="firstName" (input)="firstName = $event.target.value"> without NgModel</label>
+<br><label><input [(ngModel)]="firstName"> [(NgModel)]</label>
+<br><label><input bindon-ngModel="firstName"> bindon-NgModel</label>
+<br><label><input [ngModel]="firstName" (ngModelChange)="firstName = $event"> (ngModelChange)="firstName = $event"</label>
+<br><label><input [ngModel]="firstName" (ngModelChange)="setUpperCaseName($event)"> (ngModelChange)="setUpperCaseFirstName($event)"</label>

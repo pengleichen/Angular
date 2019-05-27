@@ -1,0 +1,59 @@
+color-bg(c, bg)
+  color c
+  background-color bg
+
+.selected
+  color-bg(white, #cfd8dc !important)
+
+.heroes
+  margin 0 0 2em 0
+  list-style-type none
+  padding 0
+  width 15em
+  li
+    cursor pointer
+    position relative
+    left 0
+    background-color #eee
+    margin .5em
+    padding .3em 0
+    height 1.6em
+    border-radius 4px
+    &:hover
+      color-bg(#607d8b, #ddd)
+      left .1em
+  .selected:hover
+    color-bg(white, #bbd8dc !important)
+  .text
+    position relative
+    top -3px
+  .badge
+    display inline-block
+    position relative
+    left -1px
+    top -4px
+    margin-right .8em
+    border-radius 4px 0 0 4px
+    padding .8em .7em 0 .7em
+    height 1.8em
+    font-size small
+    color-bg(white, #607d8b)
+    line-height 1em
+  a
+    display block
+    position relative
+    width 250px
+    text-decoration none
+    color #888
+    &:hover
+      color #607db8
+
+button
+  margin-left 10px
+  &.delete
+    position relative
+    left 180px
+    top -33px
+    color-bg(white, gray)
+    &:hover
+      color-bg(red, lightness(gray, 65%))

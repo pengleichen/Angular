@@ -1,0 +1,27 @@
+border-mix()
+  border arguments
+
+#search-box
+  width 200px
+  height 20px
+
+ul.search-result
+  margin-top 0
+  padding-left 0
+  li
+    border-mix(1px solid gray)
+    border-top none
+    padding 5px
+    width 195px
+    height 16px
+    background-color white
+    cursor pointer
+    list-style-type none
+    &:hover
+      background-color #607d8b
+    a
+      color #888
+      display block
+      text-decoration none
+      &:hover, &:active
+        color white

@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+fonts = Arial, Helvetica, sans-serif
+color-name = 'color'
+
+h(color)
+  {color-name} color
+  font-family fonts
+
+body
+  margin 2em
+
+body, input[text], button
+  color #888
+  font-family Cambria, Georgia
+
+h1
+  h(#369)
+  font-size 250%
+
+h2, h3
+  h(#444)
+  font-weight lighter
+
+label
+  color #607d8b
+  font-weight bold
+
+input
+  height 1.5em
+  font-size 1em
+  padding-left .4em
+
+
+button
+  margin 5px
+  margin-left 0
+  padding 5px 10px
+  border none
+  font-family Arial
+  background-color #eee
+  cursor pointer
+  border-radius 4px
+  &:hover
+    background-color #cfd8dc
+  &:disabled
+    color #ccc
+    background-color @background-color
+    cursor not-allowed
+
+
+*
+  font-family fonts
